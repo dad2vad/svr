@@ -8,7 +8,7 @@
     "next": "9.3.3",
     "react": "16.11.0",
     "react-dom": "16.11.0",
-    "@nandorojo/swr-firestore": "latest"
+    "@nandorojo/swr-firestore": "latest",
     "swr": "latest"
   },
   "scripts": {
