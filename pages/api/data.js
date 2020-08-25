@@ -17,6 +17,9 @@ function shouldFail() {
 }
 
 export default (req, res) => {
+      let re = UserList()
+    re = JSON.stringify(re,null,4)
+  
   if (req.method === 'POST') {
 //     const body = JSON.parse(req.body)
 //     // sometimes it will fail, this will cause a regression on the UI
@@ -28,13 +31,12 @@ export default (req, res) => {
     res.json(data)
     return
   } else {
-    let re = UserList()
-    re = JSON.stringify(re,null,4)
+
     res.json(re)
   }
 
   setTimeout(() => {
-    res.json(data)
+    res.json([data,re])
   }, 2000)
 }
 
