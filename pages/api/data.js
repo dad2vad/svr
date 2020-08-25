@@ -6,11 +6,13 @@ function shouldFail() {
 
 export default (req, res) => {
   if (req.method === 'POST') {
-    const body = JSON.parse(req.body)
-    // sometimes it will fail, this will cause a regression on the UI
-    if (!shouldFail()) {
-      data.push(body.text);
-    }
+//     const body = JSON.parse(req.body)
+//     // sometimes it will fail, this will cause a regression on the UI
+//     if (!shouldFail()) {
+//       data.push(body.text);
+//     }
+    let pu = Date.now()
+    data.unshift(pu)
     res.json(data)
     return
   }
