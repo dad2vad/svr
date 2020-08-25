@@ -9,4 +9,5 @@ export default function UserList() {
   if (!data) return <Text>Loading...</Text>
 
   return data.map((user) => <Text key={user.id}>{user.name}</Text>)
+  
 }
